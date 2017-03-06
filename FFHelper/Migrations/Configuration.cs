@@ -1,5 +1,8 @@
 namespace FFHelper.Migrations
 {
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
+    using Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -26,6 +29,23 @@ namespace FFHelper.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+            //context.Roles.AddOrUpdate(r => r.Name,
+            //new IdentityRole { Name = "Admin" },
+            //new IdentityRole { Name = "User" }
+            //);
+
+            var RoleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
+            string[] roleNames = { "Admin", "User" };
+            IdentityResult roleResult;
+            foreach (var roleName in roleNames)
+            {
+                if(!RoleManager.RoleExists(roleName))
+                {
+                    roleResult = RoleManager.Create(new IdentityRole(roleName));
+                }
+            }
+            var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+            UserManager.AddToRole("969d8a27-9304-4472-bb42-1d7476d74cdc", "Admin");
         }
     }
 }
