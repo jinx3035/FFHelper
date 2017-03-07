@@ -203,6 +203,18 @@
     <Compile Include="Migrations\201703062334210_SetAdminUser.Designer.cs">
       <DependentUpon>201703062334210_SetAdminUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703071542020_AddedPhoneToRegisterAndAccountViewModel.cs" />
+    <Compile Include="Migrations\201703071542020_AddedPhoneToRegisterAndAccountViewModel.Designer.cs">
+      <DependentUpon>201703071542020_AddedPhoneToRegisterAndAccountViewModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703071608453_AddedPhoneToRegistration.cs" />
+    <Compile Include="Migrations\201703071608453_AddedPhoneToRegistration.Designer.cs">
+      <DependentUpon>201703071608453_AddedPhoneToRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703071625001_ModifiedPhoneToTextBoxFor.cs" />
+    <Compile Include="Migrations\201703071625001_ModifiedPhoneToTextBoxFor.Designer.cs">
+      <DependentUpon>201703071625001_ModifiedPhoneToTextBoxFor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -360,6 +372,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703062334210_SetAdminUser.resx">
       <DependentUpon>201703062334210_SetAdminUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703071542020_AddedPhoneToRegisterAndAccountViewModel.resx">
+      <DependentUpon>201703071542020_AddedPhoneToRegisterAndAccountViewModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703071608453_AddedPhoneToRegistration.resx">
+      <DependentUpon>201703071608453_AddedPhoneToRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703071625001_ModifiedPhoneToTextBoxFor.resx">
+      <DependentUpon>201703071625001_ModifiedPhoneToTextBoxFor.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

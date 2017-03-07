@@ -12,7 +12,7 @@ namespace FFHelper.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(FFHelper.Models.ApplicationDbContext context)
