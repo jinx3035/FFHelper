@@ -22,7 +22,7 @@ namespace FFHelper.Api
                 HttpResponseMessage response = await client.GetAsync(url);
                 if (response.IsSuccessStatusCode)
                 {
-
+                    
                 }
                 return response;
             }
