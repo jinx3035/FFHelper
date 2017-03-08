@@ -162,6 +162,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\SportRadarBaseBallPlayerProfile.cs" />
+    <Compile Include="Api\SportRadarBasketBallPlayerProfile.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -214,6 +216,10 @@
     <Compile Include="Migrations\201703071625001_ModifiedPhoneToTextBoxFor.cs" />
     <Compile Include="Migrations\201703071625001_ModifiedPhoneToTextBoxFor.Designer.cs">
       <DependentUpon>201703071625001_ModifiedPhoneToTextBoxFor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703080005460_CreatedAPI.cs" />
+    <Compile Include="Migrations\201703080005460_CreatedAPI.Designer.cs">
+      <DependentUpon>201703080005460_CreatedAPI.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -381,6 +387,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703071625001_ModifiedPhoneToTextBoxFor.resx">
       <DependentUpon>201703071625001_ModifiedPhoneToTextBoxFor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703080005460_CreatedAPI.resx">
+      <DependentUpon>201703080005460_CreatedAPI.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
