@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Web.Mvc;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
-
+using FFHelper.Models;
 
 namespace FFHelper.Api
 {
@@ -12,7 +11,7 @@ namespace FFHelper.Api
         public async Task<HttpResponseMessage> ConsumeExternalAPI()
         {
             string url = "http://api.sportradar.us/nfl-ot1/players/9634e162-5ff5-4372-b72b-ee1b0cb73a0d/profile.json?api_key=z7ugh9dxur8qghckm8yes5mu";
-
+            Roster roster = null;
             using (HttpClient client = new HttpClient())
             {
                 client.BaseAddress = new Uri(url);
@@ -22,7 +21,8 @@ namespace FFHelper.Api
                 HttpResponseMessage response = await client.GetAsync(url);
                 if (response.IsSuccessStatusCode)
                 {
-                    
+                    roster = await response.Content.ReadAsAsync<Roster>();
+
                 }
                 return response;
             }

@@ -34,12 +34,14 @@ namespace FFHelper.Migrations
             //new IdentityRole { Name = "User" }
             //);
 
+
+
             var RoleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
             string[] roleNames = { "Admin", "User" };
             IdentityResult roleResult;
             foreach (var roleName in roleNames)
             {
-                if(!RoleManager.RoleExists(roleName))
+                if (!RoleManager.RoleExists(roleName))
                 {
                     roleResult = RoleManager.Create(new IdentityRole(roleName));
                 }
