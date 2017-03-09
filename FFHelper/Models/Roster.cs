@@ -10,7 +10,8 @@ namespace FFHelper.Models
     {
         [Key]
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string name { get; set; }
+        public string position { get; set; }
         public bool IsStarting { get; set; }
     }
 }

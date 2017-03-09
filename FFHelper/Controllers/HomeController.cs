@@ -1,8 +1,10 @@
-﻿using System;
+﻿using FFHelper.Api;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Threading.Tasks;
 
 namespace FFHelper.Controllers
 {
@@ -24,10 +26,10 @@ namespace FFHelper.Controllers
             }
         }
 
-        public ActionResult About()
+        public async Task<ActionResult> About()
         {
-            ViewBag.Message = "Your application description page.";
-
+            SportRadar sportRadar = new SportRadar();
+            await sportRadar.ConsumeFootballPPAPI();
             return View();
         }
 

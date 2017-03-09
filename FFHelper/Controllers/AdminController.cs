@@ -9,6 +9,8 @@ namespace FFHelper.Controllers
     public class AdminController : Controller
     {
         // GET: Admin
+        [HttpPost]
+
         public ActionResult Index()
         {
             return View();
