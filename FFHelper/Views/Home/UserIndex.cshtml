@@ -16,14 +16,19 @@
     </div>
 
     <div class="row">
-        <div class="col-sm-6">
-            <h1>Player search</h1>
+        <div class="col-sm-4">
+            <h1>Search player by team</h1>
             <div class="form-group">
-                <label for="musicSearch">Enter the name of a player you would like to know more about:</label>
+                <label>Select the team from the drop down menu that your player is on:</label>
                 <input type="text" class="form-control" id="musicSearch" placeholder="Search">
             </div>
-            <input type="button" class="btn btn-primary" value="Search" onclick="searchItunes()" />
-        </div>
+            <div class="form-group">
+                @Html.Label("Team", new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @*@Html.DropDownList("Name")*@
+                    @Html.DropDownList("Teams", (SelectList)ViewBag.Name, " ")
+                </div>
+            </div>
     </div>
 
     <div class="row"><div class="col-sm-12"><hr></div></div>

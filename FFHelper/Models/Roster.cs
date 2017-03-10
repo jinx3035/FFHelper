@@ -11,6 +11,8 @@ namespace FFHelper.Models
         [Key]
         public int Id { get; set; }
         public string full_name { get; set; }
+        public string primary_position { get; set; }
+        public Team Team { get; set; }
         public string ApiPlayerId { get; set; }
     }
 }

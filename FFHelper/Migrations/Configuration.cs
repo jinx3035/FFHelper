@@ -14,6 +14,10 @@ namespace FFHelper.Migrations
         {
             AutomaticMigrationsEnabled = true;
         }
+        //public override void seed(FFHelper.Models.Team team)
+        //{
+            
+        //}
 
         protected override void Seed(FFHelper.Models.ApplicationDbContext context)
         {
