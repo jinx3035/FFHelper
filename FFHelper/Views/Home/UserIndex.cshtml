@@ -1,30 +1,78 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿
+<!DOCTYPE html>
+<html>
+    @*<head>
+        <title>iTunes - Music Search with Javascript</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <style type="text/css">
+            img.img-thumbnail {height: 225px !important;}</style>
+    </head>*@
 
-<div class="jumbotron">
-    <h1>Fantasy Helper</h1>
-    <p class="lead">As a registered user you have the ability to manage your team here.</p>
-    @*<p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
-</div>
-
-<div class="row">
-    @*<div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            You can do this or that.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>*@
-    <div class="col-md-6">
-        <h2>Set your roster</h2>
-        <p>Pick your players.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+<body>
+    <div class="jumbotron">
+        <h1>Fantasy Helper</h1>
+        <p class="lead">As a registered user you have the ability to manage your team here.</p>
+        @*<p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
     </div>
-    <div class="col-md-6">
-        <h2>Veiw relevent data about your players.</h2>
-        <p>FFHelper will return TV shows relevent to your players.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
 
+    <div class="row">
+        <div class="col-sm-6">
+            <h1>Player search</h1>
+            <div class="form-group">
+                <label for="musicSearch">Enter the name of a player you would like to know more about:</label>
+                <input type="text" class="form-control" id="musicSearch" placeholder="Search">
+            </div>
+            <input type="button" class="btn btn-primary" value="Search" onclick="searchItunes()" />
+        </div>
+    </div>
+
+    <div class="row"><div class="col-sm-12"><hr></div></div>
+
+    <div class="row" id="results"> <!-- songs will be inserted here --> </div>
+
+@*<select id="Select1" >
+<option></option>
+
+</select>*@
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+     function getTerms(terms) {
+        return terms.replace(/[^a-zA-Z]+/g, ' ').trim().replace(/ /g,'+');
+      }
+
+     function shorten(phrase){
+        if(phrase.length > 30){
+          return phrase.substring(0,30)+"...";
+        } else {
+          return phrase;
+        }
+      }
+
+     function searchSportRadar(){
+        $.ajax({//League Heirarcy Api
+            url: 'http://api.sportradar.us/mlb-t6/league/hierarchy.json?api_key=y69j9hjhh48ges2wuemftdq9',
+            
+          dataType: 'json',
+          type: 'GET',
+          success: function(data) {
+              var teams = '';
+              $.each(data.results, function (index, team) {
+                  var teamData = '<div class="col-sm-4"><center>';
+                  teamData += team.name;
+                  teamData += team.ApiTeamId;
+                  teams += single;
+              });
+              $('#results').html(teams);
+            if(data.resultCount===0){
+              $('#results').html('<div class="col-sm-12"><center><strong><p>0 matches found</p></strong></center></div>');
+            }
+          }
+        });
+      }
+
+    </script>
+</body>
+</html>

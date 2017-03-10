@@ -174,7 +174,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RostersController.cs" />
@@ -237,6 +237,14 @@
     <Compile Include="Migrations\201703091638213_AddedApiCallToHomeControllerModifiedRosterModel.cs" />
     <Compile Include="Migrations\201703091638213_AddedApiCallToHomeControllerModifiedRosterModel.Designer.cs">
       <DependentUpon>201703091638213_AddedApiCallToHomeControllerModifiedRosterModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703100133294_ModifiedRosterAndTeamModels.cs" />
+    <Compile Include="Migrations\201703100133294_ModifiedRosterAndTeamModels.Designer.cs">
+      <DependentUpon>201703100133294_ModifiedRosterAndTeamModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703101341343_VariousChanges.cs" />
+    <Compile Include="Migrations\201703101341343_VariousChanges.Designer.cs">
+      <DependentUpon>201703101341343_VariousChanges.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -331,7 +339,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Models\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -370,6 +378,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Admin\" />
+    <Folder Include="Views\Api\" />
     <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
@@ -421,6 +430,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703091638213_AddedApiCallToHomeControllerModifiedRosterModel.resx">
       <DependentUpon>201703091638213_AddedApiCallToHomeControllerModifiedRosterModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703100133294_ModifiedRosterAndTeamModels.resx">
+      <DependentUpon>201703100133294_ModifiedRosterAndTeamModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703101341343_VariousChanges.resx">
+      <DependentUpon>201703101341343_VariousChanges.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

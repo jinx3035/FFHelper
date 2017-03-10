@@ -26,10 +26,10 @@ namespace FFHelper.Controllers
             }
         }
 
-        public async Task<ActionResult> About()
+        public  ActionResult About()
         {
-            SportRadar sportRadar = new SportRadar();
-            await sportRadar.ConsumeFootballPPAPI();
+            //SportRadar sportRadar = new SportRadar();
+            //await sportRadar.ConsumeFootballPPAPI();
             return View();
         }
 

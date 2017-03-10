@@ -10,8 +10,7 @@ namespace FFHelper.Models
     {
         [Key]
         public int Id { get; set; }
-        public string name { get; set; }
-        public string position { get; set; }
-        public bool IsStarting { get; set; }
+        public string full_name { get; set; }
+        public string ApiPlayerId { get; set; }
     }
 }
