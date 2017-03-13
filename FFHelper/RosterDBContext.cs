@@ -7,9 +7,9 @@ using System.Web;
 
 namespace FFHelper
 {
-    public class RosterDBContext : DbContext
-    {
-        public DbSet<Team> Teams { get; set; }
-        public DbSet<Roster> Rosters { get; set; }
-    }
+    //public class RosterDBContext : DbContext
+    //{
+    //    public DbSet<Team> Teams { get; set; }
+    //    public DbSet<Roster> Rosters { get; set; }
+    //}
 }

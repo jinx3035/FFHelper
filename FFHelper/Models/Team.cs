@@ -12,5 +12,7 @@ namespace FFHelper.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string ApiTeamId { get; set; }
+
+        //public List<Team> TeamList { get; set; }
     }   
 }

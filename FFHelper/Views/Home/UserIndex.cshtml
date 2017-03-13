@@ -1,6 +1,29 @@
-﻿
-<!DOCTYPE html>
+﻿@*<!DOCTYPE html>
 <html>
+<head>
+    <title>The Materialize Dropdowns Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+</head>
+<body class="container">
+
+    <h3>Choose a team</h3>
+    <ul id="dropdown" class="dropdown-content">
+        <li class="collection-item"><div>Arizona Diamondbacks</div></li>
+        <li class="collection-item"><div>Atlanta Braves</div></li>
+        <li class="collection-item"><div>Baltimore Orioles<a href="#!" class="secondary-content"><i class="material-icons">perm_identity</i></a></div></li>
+        <li class="collection-item"><div>Boston Red Sox<a href="#!" class="secondary-content"><i class="material-icons">perm_identity</i></a></div></li>
+    </ul>
+    <a class="btn dropdown-button" href="#" data-activates="dropdown">-Select-<i class="mdi-navigation-arrow-drop-down right"></i></a>
+</body>
+</html>*@
+
+
+@*@*<!DOCTYPE html>
+<html>*@
     @*<head>
         <title>iTunes - Music Search with Javascript</title>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -8,37 +31,42 @@
             img.img-thumbnail {height: 225px !important;}</style>
     </head>*@
 
+@model FFHelper.Models.Team
+
+@{ 
+    ViewBag.Title = "Team";
+}
+
 <body>
     <div class="jumbotron">
         <h1>Fantasy Helper</h1>
         <p class="lead">As a registered user you have the ability to manage your team here.</p>
-        @*<p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+                                
+        <p><a class='dropdown-button btn' href='#' data-activates='dropdown1'>Drop Me!</a></p>
+        <ul id='dropdown1' class='dropdown-content'>
+            <li class="collection-item"><div>Arizona Diamondbacks</div></li>
+            <li class="collection-item"><div>Atlanta Braves</div></li>
+            <li class="collection-item"><div>Baltimore Orioles</div></li>
+            <li class="collection-item"><div>Boston Red Sox</div></li>
+        </ul>
     </div>
+   
 
-    <div class="row">
-        <div class="col-sm-4">
-            <h1>Search player by team</h1>
-            <div class="form-group">
-                <label>Select the team from the drop down menu that your player is on:</label>
-                <input type="text" class="form-control" id="musicSearch" placeholder="Search">
-            </div>
-            <div class="form-group">
-                @Html.Label("Team", new { @class = "col-md-2 control-label" })
-                <div class="col-md-10">
-                    @*@Html.DropDownList("Name")*@
-                    @Html.DropDownList("Teams", (SelectList)ViewBag.Name, " ")
+        <div class="row">
+            <div class="col-sm-4">
+                <h1>Search player by team</h1>
+                <div class="form-group">
+                    <label>Select a team from the drop down menu:</label>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6">
+                        @Html.DropDownList("team", new SelectList(string.Empty, "Value", "Text"), "-select-", new { style = "width:150px", @class = "dropdown1" })
+                    </div>
                 </div>
             </div>
-    </div>
+        </div>
 
-    <div class="row"><div class="col-sm-12"><hr></div></div>
 
-    <div class="row" id="results"> <!-- songs will be inserted here --> </div>
-
-@*<select id="Select1" >
-<option></option>
-
-</select>*@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
@@ -80,4 +108,4 @@
 
     </script>
 </body>
-</html>
+@*</html>*@

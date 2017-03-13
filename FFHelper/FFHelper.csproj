@@ -250,6 +250,18 @@
     <Compile Include="Migrations\201703101813024_ModifiedTeamAndRosterModels.Designer.cs">
       <DependentUpon>201703101813024_ModifiedTeamAndRosterModels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703131355358_ModifiedTeamDropDown.cs" />
+    <Compile Include="Migrations\201703131355358_ModifiedTeamDropDown.Designer.cs">
+      <DependentUpon>201703131355358_ModifiedTeamDropDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703131430101_ModifiedTeamDropDownAgain.cs" />
+    <Compile Include="Migrations\201703131430101_ModifiedTeamDropDownAgain.Designer.cs">
+      <DependentUpon>201703131430101_ModifiedTeamDropDownAgain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703131501202_MovedLoadTeamsToTeamsController.cs" />
+    <Compile Include="Migrations\201703131501202_MovedLoadTeamsToTeamsController.Designer.cs">
+      <DependentUpon>201703131501202_MovedLoadTeamsToTeamsController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -442,6 +454,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703101813024_ModifiedTeamAndRosterModels.resx">
       <DependentUpon>201703101813024_ModifiedTeamAndRosterModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703131355358_ModifiedTeamDropDown.resx">
+      <DependentUpon>201703131355358_ModifiedTeamDropDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703131430101_ModifiedTeamDropDownAgain.resx">
+      <DependentUpon>201703131430101_ModifiedTeamDropDownAgain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703131501202_MovedLoadTeamsToTeamsController.resx">
+      <DependentUpon>201703131501202_MovedLoadTeamsToTeamsController.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
