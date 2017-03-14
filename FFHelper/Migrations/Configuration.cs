@@ -37,7 +37,8 @@ namespace FFHelper.Migrations
             //new IdentityRole { Name = "Admin" },
             //new IdentityRole { Name = "User" }
             //);
-
+            context.Team.AddOrUpdate(r => r.Name,
+                new Team { Name = "Brewers" });
 
 
             var RoleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
